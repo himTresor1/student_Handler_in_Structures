@@ -24,7 +24,16 @@ struct Student {
 
     }
  }
+void  lengthcounter(Student *student){
+    int count;
+    while (student != NULL)
 
+    {
+        count++;
+        Student.next= next;
+    }
+
+}
   int main(){
 
 
@@ -35,8 +44,8 @@ struct Student {
 
     //Dynamic assignment
 
-        // Student *s4= new Student(4,"Hiddsdfsdf", 34);
-        // Student *s5 = new Student(5, "asdkjfbad", 45);
+        Student *s4= new Student(4,"Hiddsdfsdf", 34);
+        Student *s5 = new Student(5, "asdkjfbad", 45);
 
 
         Student *head= &s1; 
