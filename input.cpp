@@ -19,19 +19,19 @@ bool validator(Child stud)
     if ( stud.marks < 0  || stud.marks > 50 )
     {
         cout << endl
-             << "students marks should be between 0 and 50 " << endl;
+             << "RANGE IS 0 - 50" << endl;
         return false;
     }
     else if (stud.rollNumber < 0)
     {
         cout << endl
-             << "Roll Number should be positive" << endl;
+             << "ONLY +VE ALLOWED" << endl;
         return false;
     }
     else if ( stud.age < 10  || stud.age > 30)
     {
         cout << endl
-             << "students age should be between 0 and 30" << endl;
+             << "RANGE IS 0-30" << endl;
         return false;
     }
     else
@@ -45,16 +45,14 @@ void print(Child s)
     cout << s.rollNumber << ", " << s.name << ", " << s.age << ", " << s.marks << endl;
 }
 int main()
-{
-    int total, average;
-    string gameRules[] = { " Age should be between 10-30 ","marks must be between 0-50" , " The rollnumber should be a  positive number."};
+{   int avg;
+    int total;
     Child students[5] = {s1, s2, s3, s4, s5};
 
     cout << "====INSTRUCTIONS======" << endl;
-    for (int i = 0; i < (end(gameRules) - begin(gameRules)); i++)
-    {
-        cout << "......." << gameRules[i] << endl;
-    }
+    cout << "RANGE OF AGE  IS 0-30 " << endl;
+    cout << "RANGE OF MARKS IN 0-50" << endl ;
+    cout << "ONLY +VE ALLOWED FOR ROLL NUMBER" <<endl ;
 
 
     for (int i = 0; i < 5; i++)
@@ -65,10 +63,10 @@ int main()
         cin >> students[i].rollNumber;
         cout << "Name:  ";
         cin >> students[i].name;
-        cout << "Age:  ";
-        cin >> students[i].age;
         cout << "Marks:  ";
         cin >> students[i].marks;
+        cout << "Age:  ";
+        cin >> students[i].age;
 
         if (!validator(students[i]))
         {
@@ -87,7 +85,7 @@ int main()
             dotText << students[i].rollNumber << ", " << students[i].name << ", " << students[i].age << ", " << students[i].marks << endl;
         }
     }
-    average = (total / 5);
+    avg = (total / 5);
     dotText.close();
 
     return 0;
