@@ -31,7 +31,11 @@ void  lengthcounter(Student *student){
     {
         count++;
         student = student->next;
+        
     }
+
+     
+     cout<< count<< endl;
 
 }
   int main(){
