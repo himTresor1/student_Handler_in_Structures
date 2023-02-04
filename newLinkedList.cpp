@@ -30,7 +30,7 @@ void  lengthcounter(Student *student){
 
     {
         count++;
-        Student.next= next;
+        student = student->next;
     }
 
 }
@@ -55,5 +55,6 @@ void  lengthcounter(Student *student){
 
 
             display(&s1);
+            lengthcounter(&s1);
 
          }
